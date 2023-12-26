@@ -148,6 +148,16 @@ i {
 		-ms-flex-preferred-size: auto;
 		flex-basis: auto;
 	}
+	.hori-selector {
+
+		
+		background-color: #fff;
+		
+		color:rgb(2, 42, 105);
+		
+		
+		
+	}
 }
 
 
