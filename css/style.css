@@ -76,7 +76,7 @@ i {
 #navbarSupportedContent>ul>li.active>a {
 	font-weight: 500;
 	font-size: 15px;
-	color: rgb(2, 42, 105);
+	color: rgb(255, 255, 255);
 	background-color: transparent;
 	transition: all 0.7s;
 }
@@ -93,12 +93,12 @@ i {
 	vertical-align: middle;
 	font-weight: 900;
 	transition: 0.5s;
-	color: rgb(2, 42, 105);
+	/* color: rgb(2, 42, 105); */
 }
 
 #navbarSupportedContent .active>a:not(:only-child):after {
 	transform: rotate(90deg);
-	color: rgb(2, 42, 105);
+	/* color: rgb(2, 42, 105); */
 }
 
 .hori-selector {
