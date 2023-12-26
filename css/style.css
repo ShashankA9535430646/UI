@@ -62,7 +62,7 @@ i {
 }
 
 #navbarSupportedContent ul li a {
-	color: rgb(255, 255, 255);
+	color:#fff;
 	text-decoration: none;
 	font-size: 15px;
 	font-weight: 500;
@@ -76,7 +76,7 @@ i {
 #navbarSupportedContent>ul>li.active>a {
 	font-weight: 500;
 	font-size: 15px;
-	/* color: rgb(2, 42, 105); */
+	color: rgb(2, 42, 105);
 	background-color: transparent;
 	transition: all 0.7s;
 }
@@ -93,12 +93,10 @@ i {
 	vertical-align: middle;
 	font-weight: 900;
 	transition: 0.5s;
-	/* color: rgb(2, 42, 105); */
 }
 
 #navbarSupportedContent .active>a:not(:only-child):after {
 	transform: rotate(90deg);
-	/* color: rgb(2, 42, 105); */
 }
 
 .hori-selector {
@@ -156,7 +154,6 @@ i {
 @media (max-width: 991px) {
 	#navbarSupportedContent ul li a {
 		padding: 12px 30px;
-		/* color:#000000; */
 	}
 
 	.hori-selector {
@@ -164,6 +161,7 @@ i {
 		margin-left: 18px;
 		border-radius: 0;
 		width:100px;
+		color:#0e344f;
 		border-top-left-radius: 25px;
 		border-bottom-left-radius: 25px;
 		border-top-right-radius: 25px;
