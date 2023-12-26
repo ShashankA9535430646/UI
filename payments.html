@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- Your Custom JS -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Rubik:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/356940580b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="lib/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="lib/cdn.jsdelivr.net/npm/bootstrap-icons%401.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        .payments {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-header hr {
+            /* border: none; */
+            border-top: 2px solid #007bff;
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .modal1 {
+            /* display: none; */
+            /* position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0; */
+            width: 100%;
+            height: 100%;
+            /* overflow: auto; */
+            /* background-color: rgba(0, 0, 0, 0.4); */
+        }
+
+        .modal-content1 {
+            background-color: #fefefe;
+            margin: 2% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Other form styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .error {
+            color: #dc3545;
+            /* display: none; */
+        }
+
+        .form-group .btn {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo " href="./index.html"><img src="" alt="">NatureNurture Agro</a>
+        <i class="fas fa-bars text-white navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"></i>
+        <!-- <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i>Home</a>
+                </li>
+                <a href="./service.html" class="nav-item nav-link" id="services" style="display: none">Our
+                    Courses</a>
+                <a href="./clients.html" class="nav-item nav-link" id="clients" style="display: none">Affiliations</a>
+                <a href="./founders.html" class="nav-item nav-link" id="founders" style="display: none">Principal
+                    Message</a>
+                <a href="./payments.html" class="nav-item nav-link active" id="payments" style="display: none">Payments</a>
+                <li class="nav-item">
+                    <a class="nav-link " href="./about.html"><i class="fa-solid fa-address-book"></i>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html"><i class="fa-solid fa-address-card"></i>Contact</a>
+                </li>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="more" data-bs-toggle="dropdown"
+                        style="display: none">More</a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start m-0">
+                        <a href="./gallery.html" class="dropdown-item" id="gallery" style="display: none">Brochures
+                            and Images</a>
+                        <!-- <a href="team.html" class="dropdown-item">Images</a> -->
+                        <a href="./reviews.html" class="dropdown-item" id="reviews"
+                            style="display: none">Testimonials</a>
+                        <a href="./careers.html" class="dropdown-item" id="careers" style="display: none">Careers</a>
+                        <a href="./products.html" class="dropdown-item" id="products" style="display: none">Our
+                            Products</a>
+                        <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
+                    </div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+                </li>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="adminActivites"
+                        style="display: none">Admin Activities</a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start m-0">
+                        <a href="./content-edit.html" class="dropdown-item">Change Website Content <br />Services
+                            and Products</a>
+                        <a href="./leads.html" class="dropdown-item">Courses Applicants</a>
+                        <a href="./paymentLeads.html" class="dropdown-item">Payments Leads</a>
+                        <a href="./careerLeads.html" class="dropdown-item">Carrer Leads</a>
+                        <a href="./add-gallery.html" class="dropdown-item">Add Brochure and Images</a>
+                        <a href="./list-gallery.html" class="dropdown-item">List Brochure and Images</a>
+                        <a href="./uploadContact.html" class="dropdown-item">
+                            Upload Contact Info</a>
+                        <a href="uploadPayment.html" class="dropdown-item">
+                            Upload Payment Info</a>
+                        <a href="upload-logo.html" class="dropdown-item">Upload Logo</a>
+                        <a href="./uploadHomePageImg.html" class="dropdown-item">Upload Home Page Image</a>
+                        <a href="./selectLogo.html" class="dropdown-item">Select Logo</a>
+                        <a href="./selectHomePageImg.html" class="dropdown-item">Select Home Page Image</a>
+                        <a href="./ManageNotifications.html" class="dropdown-item">Manage Notifications</a>
+                        <a href="./uploadReview.html" class="dropdown-item">Manage Testimonials</a>
+                        <a href="./uploadCareers.html" class="dropdown-item">Manage Careers</a>
+                        <a href="uploadClient.html" class="dropdown-item">Manage Affiliations</a>
+                        <a href="./uploadFounder.html" class="dropdown-item">Manage Principal Message</a>
+                        <button id="logout" style="color: red" class="nav-link custom-brand" data-bs-toggle="modal"
+                            data-bs-target="#logoutConfirmationModal">
+                            Logout
+                        </button>
+                        <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Full Screen Search End -->
+    <div class="container-fluid mt-5 bg-header animated slideInDown">
+        <div class="row py-0">
+            <div class="col-12  text-center">
+                <h1 class="fw-bold fs-1 text-center mb-5 mt-5"
+                    style="color: #01d28e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
+                    Payments</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+    <!-- logout -->
+    <div class="modal fade" id="logoutConfirmationModal" tabindex="-1" aria-labelledby="logoutConfirmationModalLabel"
+        data-bs-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutConfirmationModalLabel">
+                        Confirm Logout
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Are you sure you want to logout?</div>
+                <div class="modal-footer">
+                    <!-- Cancel button to close the modal -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <!-- Logout button to trigger the logout -->
+                    <button type="button" class="btn btn-primary" id="confirmLogoutBtn">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="formModal" class="modal1">
+        <div class="modal-content1 border-0">
+            <div class="row justify-content-between">
+                <div class="col-lg-6 shadow p-4">
+                    <form id="paymentForm">
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="form-control" required>
+                                    <span class="error" id="nameError" style="display:none; color:red;">Please enter a
+                                        name.</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="mobile">Mobile Number</label>
+                                    <input type="text" id="mobile" class="form-control" required>
+                                    <span class="error" id="mobileError" style="display:none; color:red;">Please enter a
+                                        valid mobile
+                                        number.</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="text" id="amount" class="form-control" required>
+                                    <span class="error" id="amountError" style="display:none; color:red;">Please enter a
+                                        valid
+                                        amount.</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="purpose">Purpose</label>
+                                    <input type="text" id="purpose" class="form-control" required>
+                                    <span class="error" id="purposeError" style="display:none; color:red;">Please enter
+                                        a
+                                        purpose.</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="form-group">
+                                    <label for="screenshot">Select Screenshot Image</label>
+                                    <input class="form-control text-muted" type="file" id="screenshot" required>
+                                    <span class="error" id="screenshotError" style="display:none; color:red;">Please
+                                        upload a
+                                        screenshot.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <button id="submitPayment" type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-lg-5 shadow">
+
+                    <section id="payments" class="payments">
+                        <br>
+                        <div class="container" data-aos="fade-up">
+                            <div class="section-header">
+
+                                <!-- Input field for UPI ID -->
+                                <div class="form-group">
+                                    <label for="upiIdInput">Enter Your UPI ID:</label>
+                                    <input type="text" class="form-control" id="upiIdInput" placeholder="example@upi">
+                                </div>
+                                <p id="upiId"></p>
+                                <!-- Dynamically generated QR code based on UPI ID -->
+                                <img id="qrCode"
+                                    src="data:image/png;base64,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"
+                                    style="max-width: 200px; display: block; margin: 0 auto;" alt="QR Code">
+                                <br>
+                            </div>
+                            <div id="uploadMessage"></div>
+                            <div class="form-group mt-3">
+                                <button id="uploadButton" type="button" class="btn btn-primary"
+                                    onclick="handleUpload()">Upload Screenshot</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- <span class="close">&times;</span> -->
+        </div>
+    </div>
+
+
+
+    <!-- <section id="payments" class="payments">
+        <br>
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2 style="text-align: center;">Payments</h2>
+				<hr style="border: none;
+                border-top: 2px solid #007bff;
+                width: 100%;
+                margin: 0 auto;">
+				<br>
+                <p id="upiId"></p>
+                <br>
+                <img id="qrCode" style="max-width: 300px; display: block; margin: 0 auto;"></img>
+                <br>
+            </div>
+            <div id="uploadMessage"></div>
+            <div class="form-group mt-3">
+                <button id="uploadButton" type="button" class="btn btn-primary">Upload Screeshshot</button>
+            </div>
+        </div>
+    </section> -->
+
+    <!--  -->
+
+    <!-- Vendor Start -->
+	<!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="vendorSection">
+		<div class="container py-5 mb-5">
+			<div class="bg-white">
+				<div class="owl-carousel vendor-carousel" id="vendor-carousel"> -->
+					<!-- Vendor logos and names will be dynamically added here -->
+				<!-- </div>
+			</div>
+		</div>
+	</div> -->
+	<!-- Vendor End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light mt-2 wow fadeInUp" data-wow-delay="0.1s"
+        style="background: linear-gradient(180deg,rgb(44, 43, 43),black);">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div id="footer-header"
+                        class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h6 class="m-0 text-success" id="webAppName">NatureNurture Agro</h6><br>
+                            <img id="logoimage" alt="logo"
+                                src="https://us.123rf.com/450wm/tanglaoya/tanglaoya2310/tanglaoya231046460/216472742-young-green-plant-growing-in-the-soil-with-bokeh-background.jpg?ver=6"
+                                style="width:150px;border-radius: 50%;" />
+                        </a>
+                        <!-- <p class="mt-3 mb-4">
+                            Lorem diam sit erat dolor elitr et, diam lorem justo amet clita
+                            stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam
+                            amet erat lorem stet eos. Diam amet et kasd eos duo.
+                        </p> -->
+                        <!-- <form action="#">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    class="form-control border-white p-3"
+                                    placeholder="Your Email" />
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-5 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h4 class="text-light mb-0">Get In Touch</h4>
+                            </div>
+                            <div class="d-flex mb-2 location-section">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0 contact-data">Bangalore</p>
+                            </div>
+                            <div class="d-flex mb-2 email-section ">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0 contact-data">naturenurtureagro@gamil.com</p>
+                            </div>
+                            <div class="d-flex  mb-2 phone-section2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0 contact-data2">+91-9536542186</p>
+                                <!-- <p class="mb-0 contact-data3"></p>
+                            <p class="mb-0 contact-data4"></p> -->
+                            </div>
+                            <div id="connectWithUsBanner" class="d-flex mt-4"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h4 class="text-light mb-0">Quick Links</h4>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="./index.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="./about.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>About
+                                    Us</a>
+                                <a class="text-light mb-2" href="./service.html" id="services2" style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Our Courses</a>
+                                <a class="text-light mb-2" href="./careers.html" id="careers2" style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Affiliations</a>
+                                <a class="text-light mb-2" href="./founders.html" id="founders2"
+                                    style="display: none"><i class="bi bi-arrow-right text-primary me-2"></i>Principal
+                                    Message</a>
+                                <a class="text-light mb-2" href="./contact.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Contact
+                                    Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h4 class="text-light mb-0">Popular Links</h4>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="./gallery.html" id="gallery2" style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Brochures</a>
+                                <a class="text-light mb-2" href="./reviews.html" id="reviews2" style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Reviews</a>
+                                <a class="text-light mb-2" href="./payments.html" id="payments2"
+                                    style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>payments</a>
+                                <a class="text-light mb-2" href="./clients.html" id="clients2" style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Affiliations</a>
+                                <a class="text-light mb-2" href="./careers.html" id="careers2" style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
+                                <a class="text-light mb-2" id="products2" href="products.html" style="display: none"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Products</a>
+                                <a class="text-light mb-2" href="login.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Login</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #3e3e3e">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px">
+                        <p class="mb-0">
+                            &copy; 2023 CodeCanvas. All rights reserved. Privacy Policy | Terms of Service | Contact Us
+                            <a class="text-white border-bottom" href="#" id="footerMessage"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
