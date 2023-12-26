@@ -76,7 +76,7 @@ i {
 #navbarSupportedContent>ul>li.active>a {
 	font-weight: 500;
 	font-size: 15px;
-	color: rgb(2, 42, 105);
+	/* color: rgb(2, 42, 105); */
 	background-color: transparent;
 	transition: all 0.7s;
 }
