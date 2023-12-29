@@ -211,8 +211,7 @@
                                 <div class="form-group">
                                     <input id="password-field" type="password" class="form-control" required>
                                     <label class="form-control-placeholder" for="password">Password</label>
-                                    <span toggle="#password-field"
-                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                    <span id="toggle-password" class="fa fa-fw fa-eye field-icon toggle-password" onclick="togglePassword()"></span>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign
@@ -373,4 +372,20 @@
 
 </body>
 <script src="js/script.js"></script>
+<script>
+    function togglePassword() {
+        var passwordField = document.getElementById("password-field");
+        var toggleIcon = document.getElementById("toggle-password");
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            toggleIcon.classList.remove("fa-eye");
+            toggleIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password";
+            toggleIcon.classList.remove("fa-eye-slash");
+            toggleIcon.classList.add("fa-eye");
+        }
+    }
+</script>
 </html>
