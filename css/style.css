@@ -105,9 +105,9 @@ i {
 	position: absolute;
 	height: 100%;
 	top: 0px;
-	right: -100px;
+	right: 0;
 	transition-duration: 0.6s;
-	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	/* transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
 	/* background-color: #fff; */
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -161,10 +161,18 @@ i {
 
 
 @media (max-width: 991px) {
-
+	#navbarSupportedContent {
+		transition: max-height 0.3s ease;
+	  }
 	#navbarSupportedContent ul li a {
 		padding: 12px 30px;
 	}
+
+		
+	.navbar-toggler.collapsed {
+		transition: transform 0.3s ease;
+	  }
+
 	.hori-selector {
 		margin-top: 4px;
 		margin-left: 18px;
