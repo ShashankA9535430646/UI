@@ -163,7 +163,10 @@ i {
 @media (max-width: 991px) {
 	#navbarSupportedContent ul li a {
 		padding: 12px 30px;
+	}
+	.navbar-expand-custom .navbar-toggler {
 		transition-duration: 5s;
+		
 	}
 
 	.hori-selector {
