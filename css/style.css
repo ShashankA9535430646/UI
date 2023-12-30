@@ -163,6 +163,7 @@ i {
 @media (max-width: 991px) {
 	#navbarSupportedContent ul li a {
 		padding: 12px 30px;
+		transition-duration: 1s;
 	}
 
 	.hori-selector {
