@@ -161,13 +161,17 @@ i {
 
 
 @media (max-width: 991px) {
+	#navbarSupportedContent {
+		transition: max-height 0.3s ease;
+	  }
 	#navbarSupportedContent ul li a {
 		padding: 12px 30px;
 	}
-	.navbar-expand-custom .navbar-toggler {
-		transition-duration: 5s;
+
 		
-	}
+	.navbar-toggler.collapsed {
+		transition: transform 0.3s ease;
+	  }
 
 	.hori-selector {
 		margin-top: 4px;
